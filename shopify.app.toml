@@ -2,7 +2,7 @@
 
 client_id = "cef466b85c33f881fb79fffc7f3e7e9a"
 name = "Product Labels & Badges"
-application_url = "https://example.com"
+application_url = "https://mahadev-web-1.onrender.com"
 embedded = true
 
 [build]
@@ -25,7 +25,7 @@ api_version = "2026-04"
 scopes = "write_metaobject_definitions,write_metaobjects,write_products"
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = [ "https://mahadev-web-1.onrender.com/api/auth" ]
 
 [product.metafields.app.demo_info]
 type = "single_line_text_field"
