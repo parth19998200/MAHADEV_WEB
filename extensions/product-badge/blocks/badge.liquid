@@ -1,0 +1,64 @@
+{% if product.metafields.custom.product_badge != blank %}
+  {% assign badge_data = product.metafields.custom.product_badge.value %}
+  
+  {% if badge_data.isEnabled %}
+    <div class="mahadev-premium-badge-container">
+      {% if badge_data.imageUrl != blank %}
+        <img src="{{ badge_data.imageUrl }}" alt="Special Offer" class="mahadev-badge-image">
+      {% elsif badge_data.text != blank %}
+        <span class="mahadev-badge-text">{{ badge_data.text }}</span>
+      {% endif %}
+    </div>
+
+    <style>
+      /* Main Container */
+      .mahadev-premium-badge-container {
+        display: inline-block;
+        margin-bottom: 15px; /* Title ni aspas thodi jagya */
+      }
+
+      /* Premium Text Sticker CSS */
+      .mahadev-badge-text {
+        background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%); /* Mast Lal-Orange Gradient */
+        color: #ffffff;
+        padding: 6px 16px;
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border-radius: 30px; /* Ekdum gol kinari */
+        box-shadow: 0px 8px 15px rgba(255, 8, 68, 0.4); /* 3D Shadow */
+        display: inline-block;
+        
+        /* Jaduvi Animation */
+        animation: heartbeat 2s infinite;
+      }
+
+      /* Custom Image Sticker CSS */
+      .mahadev-badge-image {
+        max-width: 80px;
+        height: auto;
+        border-radius: 8px;
+        animation: heartbeat 2s infinite;
+      }
+
+      /* Dhabak-tu (Pulse) Animation ni Magic */
+      @keyframes heartbeat {
+        0% { transform: scale(1); }
+        15% { transform: scale(1.08); }
+        30% { transform: scale(1); }
+        45% { transform: scale(1.08); }
+        60% { transform: scale(1); }
+        100% { transform: scale(1); }
+      }
+    </style>
+  {% endif %}
+{% endif %}
+
+{% schema %}
+{
+  "name": "Product Badge",
+  "target": "section",
+  "settings": []
+}
+{% endschema %}

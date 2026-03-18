@@ -1,0 +1,46 @@
+
+> build
+> react-router build
+
+[36mvite v6.4.1 [32mbuilding for production...[36m[39m
+transforming...
+[32m✓[39m 33 modules transformed.
+[31m✗[39m Build failed in 489ms
+[31m[vite]: Rollup failed to resolve import "@shopify/polaris" from "C:/Users/Pathu/Desktop/Labels/product-labels-badges/app/routes/app.badges.jsx".
+This is most likely unintended because it can break your application at runtime.
+If you do want to externalize this module explicitly add it to
+`build.rollupOptions.external`[39m
+    at viteLog (file:///C:/Users/Pathu/Desktop/Labels/product-labels-badges/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:46374:15)
+    at file:///C:/Users/Pathu/Desktop/Labels/product-labels-badges/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:46432:18
+    at onwarn (C:\Users\Pathu\Desktop\Labels\product-labels-badges\node_modules\@react-router\dev\dist\cli\index.js:1670:11)
+    at file:///C:/Users/Pathu/Desktop/Labels/product-labels-badges/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:46430:7
+    at onRollupLog (file:///C:/Users/Pathu/Desktop/Labels/product-labels-badges/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:46422:5)
+    at onLog (file:///C:/Users/Pathu/Desktop/Labels/product-labels-badges/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:46072:7)
+    at file:///C:/Users/Pathu/Desktop/Labels/product-labels-badges/node_modules/rollup/dist/es/shared/node-entry.js:20981:32
+    at Object.logger [as onLog] (file:///C:/Users/Pathu/Desktop/Labels/product-labels-badges/node_modules/rollup/dist/es/shared/node-entry.js:22968:9)
+    at ModuleLoader.handleInvalidResolvedId (file:///C:/Users/Pathu/Desktop/Labels/product-labels-badges/node_modules/rollup/dist/es/shared/node-entry.js:21712:26)
+    at file:///C:/Users/Pathu/Desktop/Labels/product-labels-badges/node_modules/rollup/dist/es/shared/node-entry.js:21670:26 {
+  watchFiles: [
+    'C:/Users/Pathu/Desktop/Labels/product-labels-badges/app/routes/webhooks.app.scopes_update.jsx',
+    'C:/Users/Pathu/Desktop/Labels/product-labels-badges/node_modules/@react-router/dev/dist/config/defaults/entry.client.tsx',
+    'C:/Users/Pathu/Desktop/Labels/product-labels-badges/app/routes/webhooks.app.uninstalled.jsx',
+    'C:/Users/Pathu/Desktop/Labels/product-labels-badges/app/routes/_index/route.jsx',
+    'C:/Users/Pathu/Desktop/Labels/product-labels-badges/app/root.jsx',
+    'C:/Users/Pathu/Desktop/Labels/product-labels-badges/app/routes/auth.login/route.jsx',
+    'C:/Users/Pathu/Desktop/Labels/product-labels-badges/app/routes/auth.$.jsx',
+    'C:/Users/Pathu/Desktop/Labels/product-labels-badges/app/routes/app.additional.jsx',
+    'C:/Users/Pathu/Desktop/Labels/product-labels-badges/app/routes/app.jsx',
+    'C:/Users/Pathu/Desktop/Labels/product-labels-badges/app/routes/app.badges.jsx',
+    'C:/Users/Pathu/Desktop/Labels/product-labels-badges/app/routes/app._index.jsx',
+    'C:\\Users\\Pathu\\Desktop\\Labels\\product-labels-badges\\package.json',
+    'C:/Users/Pathu/Desktop/Labels/product-labels-badges/node_modules/react/jsx-runtime.js',
+    'C:/Users/Pathu/Desktop/Labels/product-labels-badges/node_modules/react/index.js',
+    'C:/Users/Pathu/Desktop/Labels/product-labels-badges/node_modules/react-router/dist/development/dom-export.mjs',
+    'C:/Users/Pathu/Desktop/Labels/product-labels-badges/node_modules/react-dom/client.js',
+    'C:/Users/Pathu/Desktop/Labels/product-labels-badges/node_modules/react/cjs/react.production.min.js',
+    'C:/Users/Pathu/Desktop/Labels/product-labels-badges/node_modules/react/cjs/react-jsx-runtime.production.min.js',
+    'C:/Users/Pathu/Desktop/Labels/product-labels-badges/node_modules/react-dom/index.js',
+    'C:/Users/Pathu/Desktop/Labels/product-labels-badges/node_modules/react-router/dist/development/chunk-LFPYN7LY.mjs',
+    'C:/Users/Pathu/Desktop/Labels/product-labels-badges/node_modules/react-router/dist/development/chunk-JPUPSTYD.mjs'
+  ]
+}
