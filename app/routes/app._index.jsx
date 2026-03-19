@@ -38,6 +38,10 @@ export const action = async ({ request }) => {
               jsonValue
             }
           }
+          userErrors {
+            field
+            message
+          }
         }
       }`,
     {
@@ -56,7 +60,16 @@ export const action = async ({ request }) => {
     },
   );
   const responseJson = await response.json();
-  const product = responseJson.data.productCreate.product;
+  const product = responseJson.data?.productCreate?.product;
+
+  if (!product) {
+    console.error("Failed to create product:", responseJson.data?.productCreate?.userErrors || responseJson.errors);
+    return {
+      product: null,
+      error: "Failed to create product. Check app scopes or user errors.",
+    };
+  }
+
   const variantId = product.variants.edges[0].node.id;
   const variantResponse = await admin.graphql(
     `#graphql
@@ -142,7 +155,7 @@ export default function Index() {
 
   return (
     <s-page heading="Shopify app template">
-      <s-button slot="primary-action" onClick={generateProduct}>
+      <s-button slot="primary-action" variant="primary" onClick={generateProduct}>
         Generate a product
       </s-button>
 
